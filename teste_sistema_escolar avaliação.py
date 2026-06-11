@@ -1,6 +1,5 @@
 import os
 
-# Base de dados em memória
 alunos = []
 
 def calcular_media_notas(notas):
@@ -20,7 +19,7 @@ def cadastrar_aluno():
     print("\n--- CADASTRO DE ALUNO ---")
     nome = input("Nome do aluno: ").strip()
     
-    # Validação para idade (evita que o programa feche se digitarem letras)
+
     while True:
         try:
             idade = int(input("Idade do aluno: "))
@@ -210,7 +209,6 @@ def carregar_dados():
         except Exception as e:
             print(f"Aviso: Não foi possível ler o arquivo salvo anteriormente ({e}). Iniciando sistema vazio.")
 
-# Menu Principal do Sistema
 def menu():
     # Carrega os dados automaticamente ao abrir o programa
     carregar_dados()
@@ -240,7 +238,7 @@ def menu():
         elif opcao == "5":
             salvar_dados()
         elif opcao == "6":
-            # Pergunta amigável antes de fechar sem salvar
+            
             confirmar = input("\nDeseja salvar as alterações antes de sair? (S/N): ").strip().lower()
             if confirmar == 's':
                 salvar_dados()
