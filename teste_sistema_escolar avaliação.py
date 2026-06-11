@@ -247,6 +247,5 @@ def menu():
         else:
             print("Opção inválida! Escolha um número entre 1 e 6.")
 
-# Executa o programa
 if __name__ == "__main__":
     menu()
